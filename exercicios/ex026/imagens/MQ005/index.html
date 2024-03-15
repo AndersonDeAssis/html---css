@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="estilo/style.css">
+    <link rel="stylesheet" href="estilo/media-query.css">
 
     <!-- esse é o link do icone de menu hamburguer do google icons, o codigo para utilizaçao vem logo abaixo nesse caso e a linha 23-->
     <link rel="stylesheet"
@@ -14,7 +15,7 @@
     <title>Menu Responsivo</title>
 </head>
 
-<body>
+<body onresize="observar()">
 
     <header>
         <h1>
@@ -63,6 +64,16 @@
         </p>
     </main>
    <script>
+
+function observar(){
+        if (window.innerWidth >= 760){
+            navegacao.style.display = 'block'
+        }
+        else {
+            navegacao.style.display = 'none'
+        }
+    }
+
     function clickMenu(){
         if(navegacao.style.display == 'none'){
             navegacao.style.display = 'block'
